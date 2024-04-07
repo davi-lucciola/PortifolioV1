@@ -11,11 +11,11 @@ def create_app():
     def index():
         return render_template("index.html")
 
-    app.register_blueprint(admin_bp)
+    # app.register_blueprint(admin_bp)
 
-    with app.app_context():
-        db.init_app(app)
-        migrations.init_app(app)
-        login_manager.init_app(app)
+    # with app.app_context():
+    #     db.init_app(app)
+    #     migrations.init_app(app)
+    #     login_manager.init_app(app)
 
     return app
