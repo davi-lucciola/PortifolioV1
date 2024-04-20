@@ -5,16 +5,26 @@
 
 main {
   font-family: $primary-font-family;
-  background-size: cover;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
   background-image: url('/static/images/synthwave.gif');
 
   section {
-    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 12vh !important;
+
+    scroll-snap-align: start;
   }
 
   @import "./index/hero.scss";
   @import "./index/about.scss";
   @import "./index/skills.scss";
+
+  #contact {
+    form {
+      max-width: 50rem;
+    }
+  }
 }
